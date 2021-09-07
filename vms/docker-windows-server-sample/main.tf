@@ -22,7 +22,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "docker-windows-server" {
   name     = "docker-windows-server-resources"
-  location = "West Europe"
+  location = "${var.location}"
 }
 
 resource "azurerm_virtual_network" "docker-windows-server" {
@@ -70,7 +70,7 @@ resource "azurerm_windows_virtual_machine" "docker-windows-server" {
   computer_name       = "docker-win-vm"
   resource_group_name = azurerm_resource_group.docker-windows-server.name
   location            = azurerm_resource_group.docker-windows-server.location
-  size                = "Standard_D4s_v3"
+  size                = "${var.instance_type}"
   admin_username      = "sergeyd"
   admin_password      = random_password.password.result
   network_interface_ids = [
