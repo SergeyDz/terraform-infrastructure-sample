@@ -5,7 +5,7 @@ terraform {
       version = "2.66.0"
     }
   }
-
+  
   backend "azurerm" {
     resource_group_name  = "learning"
     storage_account_name = "sergeydzyuban"
