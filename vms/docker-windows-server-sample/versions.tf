@@ -17,7 +17,7 @@ terraform {
     resource_group_name  = "learning"
     storage_account_name = "sergeydzyuban"
     container_name       = "terraform"
-    key                  = "docker-windows-server-sample/terraform.tfstate"
+    key                  = "vm/terraform.tfstate"
   }
 
   required_version = ">= 0.14.9"
