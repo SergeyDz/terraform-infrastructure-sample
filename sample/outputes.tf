@@ -4,5 +4,5 @@ output "password" {
 }
 
 output "external_ip" {
-   value = data.azurerm_public_ip.docker-windows-server.ip_address
+   value = data.azurerm_public_ip.iac-poc-tf.ip_address
 }
