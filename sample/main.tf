@@ -54,7 +54,7 @@ resource "random_password" "iac-poc-tf" {
 
 resource "azurerm_linux_virtual_machine" "iac-poc-tf" {
   name                = "iac-poc-tf-machine"
-  computer_name       = "iacp-linux-vm"
+  computer_name       = "iacp-linux-vm-edited"
   resource_group_name = azurerm_resource_group.iac-poc-tf.name
   location            = azurerm_resource_group.iac-poc-tf.location
   size                = "${var.instance_type}"
