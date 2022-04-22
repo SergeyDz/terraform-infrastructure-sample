@@ -10,7 +10,7 @@ variable "location" {
 
 variable "cloudinit_file" {
   description = "Cloud init file"
-  default = "init.ps1"
+  default = "init.sh"
 }
 
 variable "resourcegroup" {
