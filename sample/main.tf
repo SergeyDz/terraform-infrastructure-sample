@@ -95,6 +95,6 @@ resource "azurerm_linux_virtual_machine" "iac-poc-tf" {
 
 data "azurerm_public_ip" "iac-poc-tf" {
   name                = azurerm_public_ip.iac-poc-tf.name
-  resource_group_name = azurerm_windows_virtual_machine.iac-poc-tf.resource_group_name
-  depends_on          = [azurerm_windows_virtual_machine.iac-poc-tf]
+  resource_group_name = azurerm_linux_virtual_machine.iac-poc-tf.resource_group_name
+  depends_on          = [azurerm_linux_virtual_machine.iac-poc-tf]
 }

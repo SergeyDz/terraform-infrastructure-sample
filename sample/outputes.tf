@@ -1,5 +1,5 @@
 output "password" {
-  value = random_password.password.result
+  value = random_password.iac-poc-tf.result
   sensitive = true
 }
 
