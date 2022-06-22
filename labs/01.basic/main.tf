@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "vm" {
-  ami           = "ami-0cff7528ff583bf9a"
+  ami           = var.ami
   subnet_id     = var.subnet_id
   instance_type = var.instance_type
   tags = {
