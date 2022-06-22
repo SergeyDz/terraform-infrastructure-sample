@@ -4,8 +4,8 @@ provider "aws" {
 
 resource "aws_instance" "vm" {
   ami           = "ami-0cff7528ff583bf9a"
-  subnet_id     = "subnet-014a79b070ccb260d"
-  instance_type = "t3.micro"
+  subnet_id     = var.subnet_id
+  instance_type = var.instance_type
   tags = {
     Name = "my-first-tf-node"
   }
