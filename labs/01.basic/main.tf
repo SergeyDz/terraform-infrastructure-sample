@@ -8,6 +8,11 @@ resource "aws_instance" "vm" {
   tags          = var.tags
 
   provisioner "local-exec" {
-    command = "yum update -y"
+    command = "apt update -y && apt-get install -y mc nano htop python3-pip"
   }
+
+  provisioner "local-exec" {
+    command = "apt-get install -y apache2"
+  }
+
 }
