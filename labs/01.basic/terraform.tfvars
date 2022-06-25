@@ -4,5 +4,5 @@ instance_type = "t3.micro"
 machine_name  = "my-ec2-test-instance"
 tags = {
   Iteration = 2
-  Email     = "dz@nomail.com"
+  Email     = "dzu@nomail.com"
 }
