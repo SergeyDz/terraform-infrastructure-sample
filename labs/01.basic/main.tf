@@ -10,6 +10,9 @@ resource "tls_private_key" "vm" {
 resource "aws_key_pair" "generated_key" {
   key_name   = var.key_name
   public_key = tls_private_key.vm.public_key_openssh
+  provisioner "local-exec" { 
+    command = "echo '${tls_private_key.vm.private_key_pem}' > ./${var.key_name}.temporary.pem"
+  }
 }
 resource "aws_instance" "vm" {
   ami           = var.ami
