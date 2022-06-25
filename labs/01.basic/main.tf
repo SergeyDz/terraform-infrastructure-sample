@@ -21,7 +21,7 @@ resource "aws_instance" "vm" {
   key_name      = aws_key_pair.generated_key.key_name
   tags          = var.tags
 
-  provisioner "local-exec" {
+  provisioner "remote-exec" {
     command = "sudo apt-get update -y && sudo apt-get install -y mc nano htop python3-pip apache2"
   }
 }
