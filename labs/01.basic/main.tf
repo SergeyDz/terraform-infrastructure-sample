@@ -22,11 +22,6 @@ resource "aws_instance" "vm" {
   tags          = var.tags
 
   provisioner "local-exec" {
-    command = "sudo apt-get update -y && sudo apt-get install -y mc nano htop python3-pip"
+    command = "sudo apt-get update -y && sudo apt-get install -y mc nano htop python3-pip apache2"
   }
-
-  provisioner "local-exec" {
-    command = "sudo apt-get install -y apache2"
-  }
-
 }
