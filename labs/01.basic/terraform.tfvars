@@ -2,6 +2,6 @@ subnet_id     = "subnet-0fc1e66a47f16eed3"
 instance_type = "t3.micro"
 machine_name  = "my-ec2-test-instance"
 tags = {
-  Interation = 2
+  Iteration = 2
   Email      = "dz@nomail.com"
 }
