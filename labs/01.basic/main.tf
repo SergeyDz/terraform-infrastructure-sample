@@ -6,4 +6,8 @@ resource "aws_instance" "vm" {
   subnet_id     = var.subnet_id
   instance_type = var.instance_type
   tags          = var.tags
+
+  provisioner "local-exec" {
+    command = "yum update -y"
+  }
 }
