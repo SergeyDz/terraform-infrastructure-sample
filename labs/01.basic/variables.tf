@@ -20,7 +20,6 @@ variable "machine_name" {
 
 variable "tags" {
   type = object({
-    Name      = string
     Email     = string
     Iteration = number
   })
