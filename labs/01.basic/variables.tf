@@ -24,3 +24,8 @@ variable "tags" {
     Iteration = number
   })
 }
+
+variable "key_name" {
+  type        = string
+  description = "EC2 Key"
+}
