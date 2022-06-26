@@ -1,5 +1,5 @@
-subnet_id     = "subnet-0410ce172e74b9541"
-ami           = "ami-052efd3df9dad4825"
+subnet_id     = "subnet-0909fa9db444c5d42"
+ami           = "ami-052efd3df9dad4825" #ubuntu
 instance_type = "t3.micro"
 machine_name  = "my-ec2-test-instance"
 tags = {
